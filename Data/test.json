@@ -1,0 +1,72 @@
+
+[
+    {
+        "Name":"Наименование задачи",
+        "Description":[
+            {"Header":"Заголовок Задания"},
+            {"Simple":"описание 1"},
+            {"Simple":"описание 2"},
+            {"Simple":"описание 3"},
+            {"Simple":"описание 4"},
+            {"Header":"Заголовок Задания 1"},
+            {"Simple":"описание 5"}
+        ],
+        "Option":[
+            "Test Answer 1",
+            "Test Answer 2",
+            "Test Answer 3",
+            "Test Answer 4"
+        ],
+        "CorrectAnswer":[
+            "Test Answer 1"
+        ],
+        "SupportHint":"hint",
+        "SupportAnswer":"Answer",
+        "IsCode":false
+    },
+    {
+        "Name":"Наименование задачи",
+        "Description":[
+            {"Header":"Заголовок Задания"},
+            {"Simple":"описание 1"},
+            {"Simple":"описание 2"},
+            {"Simple":"описание 3"},
+            {"Simple":"описание 4"},
+            {"Header":"Заголовок Задания 1"},
+            {"Simple":"описание 5"}
+        ],
+        "Option":[
+            "Test Answer 1",
+            "Test Answer 2",
+            "Test Answer 3",
+            "Test Answer 4"
+        ],
+        "CorrectAnswer":[
+            "Test Answer 1",
+            "Test Answer 4"
+        ],
+        "SupportHint":"hint",
+        "SupportAnswer":"Answer",
+        "IsCode":false
+    },
+    {
+        "Name":"Наименование задачи",
+        "Description":[
+            {"Header":"Заголовок Задания"},
+            {"Simple":"описание 1"},
+            {"Simple":"описание 2"},
+            {"Simple":"описание 3"},
+            {"Simple":"описание 4"},
+            {"Header":"Заголовок Задания 1"},
+            {"Simple":"описание 5"}
+        ],
+        "Option":[],
+        "CorrectAnswer":[
+            "Test Answer 1",
+            "Test Answer 4"
+        ],
+        "SupportHint":"hint",
+        "SupportAnswer":"Answer",
+        "IsCode":false
+    }
+]

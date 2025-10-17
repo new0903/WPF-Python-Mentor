@@ -1,0 +1,170 @@
+{
+  "SectionId": "8c265e80-ab20-4f52-a628-6e08349dcab8",
+  "Quests": [
+    {
+      "Name": "Пролог: Искусство логических заклинаний",
+      "Description": [
+        { "Header": "Магический круг Йеннифэр" },
+        { "Simple": "'and, or, not - это три столпа логики в Python,' - объясняет Йеннифэр, рисуя в воздухе руны. 'Они позволяют объединять условия и создавать сложные стратегии, как генералы объединяют отряды для битвы.'" },
+        { "Header": "Три великих оператора" },
+        { "Simple": "and - И: оба условия должны быть True\nor - ИЛИ: хотя бы одно условие должно быть True  \nnot - НЕ: инвертирует значение (True становится False, и наоборот)" },
+        { "Simple": "Таблица истинности:\nTrue and True = True\nTrue and False = False\nFalse and True = False\nFalse and False = False\n\nTrue or True = True\nTrue or False = True\nFalse or True = True\nFalse or False = False\n\nnot True = False\nnot False = True" },
+        { "Simple": "'Эти операторы,' - продолжает Йеннифэр, 'помогут тебе принимать мудрые решения в бою и создавать непробиваемую логику для твоих программ.'" }
+      ],
+      "Option": [],
+      "CorrectAnswer": [],
+      "SupportHint": "",
+      "SupportAnswer": "",
+      "IsCode": false
+    },
+    {
+      "Name": "Задание 1: Проверка доступа в магическую библиотеку",
+      "Description": [
+        { "Header": "Врата древней библиотеки" },
+        { "Simple": "'Для входа нужен магический ключ И уровень не менее 5, ИЛИ рекомендация архимага,' - гласит надпись на вратах." },
+        { "Simple": "Что выведет этот код?\nkey = True\nlevel = 6\nrecommendation = False\naccess = (key and level >= 5) or recommendation\nprint(access)\nprint(f'Ключ: {key}, Уровень: {level}, Рекомендация: {recommendation}')" }
+      ],
+      "Option": [
+        "True\nКлюч: True, Уровень: 6, Рекомендация: False",
+        "False\nКлюч: True, Уровень: 6, Рекомендация: False",
+        "True\nКлюч: True, Уровень: 5, Рекомендация: True",
+        "False\nКлюч: False, Уровень: 6, Рекомендация: True",
+        "True\nКлюч: True, Уровень: 4, Рекомендация: True"
+      ],
+      "CorrectAnswer": [
+        "True\nКлюч: True, Уровень: 6, Рекомендация: False"
+      ],
+      "SupportHint": "key and level >= 5 = True and True = True, затем True or False = True",
+      "SupportAnswer": "Правильный ответ: True\nКлюч: True, Уровень: 6, Рекомендация: False\n\nПошаговое выполнение:\n1. key = True\n2. level >= 5 → 6 >= 5 → True\n3. key and level >= 5 → True and True → True\n4. recommendation = False\n5. access = True or False → True\n6. print(access) → True\n7. print(f'Ключ: {key}, Уровень: {level}, Рекомендация: {recommendation}') → Ключ: True, Уровень: 6, Рекомендация: False\n\nДоступ разрешен, так как есть ключ и достаточный уровень.",
+      "IsCode": false
+    },
+    {
+      "Name": "Задание 2: Отбор в элитный отряд",
+      "Description": [
+        { "Header": "Казармы Каэр Морхена" },
+        { "Simple": "'В элитный отряд берут тех, у кого сила > 80 И ловкость > 70, ИЛИ магический дар И интеллект > 90,' - объявляет Весемир." },
+        { "Simple": "Отметь ВСЕ варианты кода, которые правильно проверяют условия отбора." }
+      ],
+      "Option": [
+        "strength = 85\nagility = 75\nmagic = False\nintellect = 95\nselected = (strength > 80 and agility > 70) or (magic and intellect > 90)",
+        "selected = (strength > 80 or agility > 70) and (magic or intellect > 90)",
+        "if (strength > 80 and agility > 70) or (magic and intellect > 90):\n    selected = True\nelse:\n    selected = False",
+        "selected = strength > 80 and (agility > 70 or magic) and intellect > 90",
+        "condition1 = strength > 80 and agility > 70\ncondition2 = magic and intellect > 90\nselected = condition1 or condition2",
+        "selected = not (strength <= 80 or agility <= 70) and not (not magic or intellect <= 90)"
+      ],
+      "CorrectAnswer": [
+        "strength = 85\nagility = 75\nmagic = False\nintellect = 95\nselected = (strength > 80 and agility > 70) or (magic and intellect > 90)",
+        "if (strength > 80 and agility > 70) or (magic and intellect > 90):\n    selected = True\nelse:\n    selected = False",
+        "condition1 = strength > 80 and agility > 70\ncondition2 = magic and intellect > 90\nselected = condition1 or condition2"
+      ],
+      "SupportHint": "Условие: (сила И ловкость) ИЛИ (магия И интеллект)",
+      "SupportAnswer": "Правильные варианты:\n\n1. (strength > 80 and agility > 70) or (magic and intellect > 90) ✓\n   - strength=85>80=True, agility=75>70=True → condition1=True\n   - magic=False, intellect=95>90=True → condition2=False  \n   - True or False → True\n\n2. if с правильным условием ✓\n   - Тот же логический выражение в условии if\n\n3. Разделение на условия ✓\n   - Понятное разделение логики\n\nНеправильные:\n- (strength > 80 or agility > 70) and (magic or intellect > 90) ✗\n  Изменена логика с AND на OR\n- strength > 80 and (agility > 70 or magic) and intellect > 90 ✗\n  Неправильная группировка условий\n- Сложное отрицание ✗\n  Работает, но слишком сложно для понимания",
+      "IsCode": false
+    },
+    {
+      "Name": "Задание 3: Анализ уязвимости монстра",
+      "Description": [
+        { "Header": "Логово призрака" },
+        { "Simple": "'Призрак уязвим к серебру ИЛИ заклинанию изгнания, НО невосприимчив к физическим атакам,' - читает Геральт из бестиария." },
+        { "Simple": "Что выведет этот код?\nsilver_weapon = True\nexorcism_spell = False\nphysical_attack = True\n\nvulnerable = (silver_weapon or exorcism_spell) and not physical_attack\neffective = silver_weapon or exorcism_spell\nimmune = physical_attack\n\nprint(f'Уязвим: {vulnerable}')\nprint(f'Эффективно: {effective}')\nprint(f'Иммунитет: {immune}')" }
+      ],
+      "Option": [
+        "Уязвим: False\nЭффективно: True\nИммунитет: True",
+        "Уязвим: True\nЭффективно: True\nИммунитет: False",
+        "Уязвим: False\nЭффективно: False\nИммунитет: True",
+        "Уязвим: True\nЭффективно: False\nИммунитет: True",
+        "Уязвим: False\nЭффективно: True\nИммунитет: False"
+      ],
+      "CorrectAnswer": [
+        "Уязвим: False\nЭффективно: True\nИммунитет: True"
+      ],
+      "SupportHint": "silver_weapon or exorcism_spell = True or False = True, not physical_attack = not True = False",
+      "SupportAnswer": "Правильный ответ: Уязвим: False\nЭффективно: True\nИммунитет: True\n\nПошаговое выполнение:\n1. silver_weapon = True, exorcism_spell = False\n2. silver_weapon or exorcism_spell → True or False → True\n3. physical_attack = True\n4. not physical_attack → not True → False\n5. vulnerable = True and False → False\n6. effective = silver_weapon or exorcism_spell → True\n7. immune = physical_attack → True\n\nВывод: есть эффективное оружие (серебро), но монстр имеет иммунитет к физическим атакам, поэтому не уязвим в данный момент.",
+      "IsCode": false
+    },
+    {
+      "Name": "Задание 4: Создание защитного амулета",
+      "Description": [
+        { "Header": "Мастерская рунного мастера" },
+        { "Simple": "'Амулет защиты должен активироваться когда: здоровье < 30% И мана > 50, ИЛИ получен смертельный удар,' - объясняет мастер." },
+        { "Simple": "Какой код правильно проверяет условия активации амулета? Выбери ОДИН вариант." }
+      ],
+      "Option": [
+        "health_percent = 25\nmana = 60\nlethal_hit = False\nactivate = (health_percent < 30 and mana > 50) or lethal_hit",
+        "activate = health_percent < 30 or mana > 50 and lethal_hit",
+        "activate = health_percent < 30 and (mana > 50 or lethal_hit)",
+        "if health_percent < 30:\n    if mana > 50:\n        activate = True\n    else:\n        activate = lethal_hit\nelse:\n    activate = lethal_hit",
+        "activate = not (health_percent >= 30 and mana <= 50) or lethal_hit",
+        "Все варианты верны"
+      ],
+      "CorrectAnswer": [
+        "health_percent = 25\nmana = 60\nlethal_hit = False\nactivate = (health_percent < 30 and mana > 50) or lethal_hit"
+      ],
+      "SupportHint": "Условие: (здоровье И мана) ИЛИ смертельный удар. Важен порядок операций.",
+      "SupportAnswer": "Правильный ответ: activate = (health_percent < 30 and mana > 50) or lethal_hit\n\nОбъяснение:\n- health_percent < 30 and mana > 50 → 25<30=True и 60>50=True → True\n- lethal_hit = False\n- True or False → True\n\nДругие варианты:\n- health_percent < 30 or mana > 50 and lethal_hit ✗\n  Приоритет AND выше OR, поэтому вычисляется как: 25<30 or (60>50 and False) → True or (True and False) → True or False → True (совпадение)\n  \n- health_percent < 30 and (mana > 50 or lethal_hit) ✗\n  Изменена логика: здоровье и (мана или удар)\n\n- Сложный if ✗\n  Работает, но избыточно сложно\n\n- Отрицание ✗\n  not (health>=30 and mana<=50) = not(False and False) = not False = True\n  True or False → True (совпадение), но логика запутана",
+      "IsCode": false
+    },
+    {
+      "Name": "Задание 5: Логическая головоломка от Лютика",
+      "Description": [
+        { "Header": "Таверна 'Три ворона'" },
+        { "Simple": "'Разгадай мою загадку!' - смеется Лютик. 'not (A and B) всегда равно (not A) or (not B), а not (A or B) всегда равно (not A) and (not B). Это законы де Моргана!'" },
+        { "Simple": "Что выведет этот код?\nA = True\nB = False\n\nresult1 = not (A and B)\nresult2 = (not A) or (not B)\nresult3 = not (A or B) \nresult4 = (not A) and (not B)\n\nprint(f'not(A and B) = {result1}')\nprint(f'(not A) or (not B) = {result2}')\nprint(f'not(A or B) = {result3}')\nprint(f'(not A) and (not B) = {result4}')" }
+      ],
+      "Option": [
+        "not(A and B) = True\n(not A) or (not B) = True\nnot(A or B) = False\n(not A) and (not B) = False",
+        "not(A and B) = False\n(not A) or (not B) = True\nnot(A or B) = True\n(not A) and (not B) = False",
+        "not(A and B) = True\n(not A) or (not B) = False\nnot(A or B) = False\n(not A) and (not B) = True",
+        "not(A and B) = True\n(not A) or (not B) = True\nnot(A or B) = False\n(not A) and (not B) = True"
+      ],
+      "CorrectAnswer": [
+        "not(A and B) = True\n(not A) or (not B) = True\nnot(A or B) = False\n(not A) and (not B) = False"
+      ],
+      "SupportHint": "A and B = True and False = False, A or B = True or False = True",
+      "SupportAnswer": "Правильный ответ: not(A and B) = True\n(not A) or (not B) = True\nnot(A or B) = False\n(not A) and (not B) = False\n\nПошаговое выполнение:\n1. A = True, B = False\n2. A and B → True and False → False\n   not (A and B) → not False → True\n3. not A → not True → False\n   not B → not False → True\n   (not A) or (not B) → False or True → True\n4. A or B → True or False → True\n   not (A or B) → not True → False\n5. (not A) and (not B) → False and True → False\n\nЗаконы де Моргана подтверждены:\nnot(A and B) = (not A) or (not B) → True = True\nnot(A or B) = (not A) and (not B) → False = False",
+      "IsCode": false
+    },
+    {
+      "Name": "Задание 6: Сложная тактическая дилемма",
+      "Description": [
+        { "Header": "Военный совет перед битвой" },
+        { "Simple": "'Атаковать если: наши силы > вражеских И у нас есть подкрепление, ИЛИ враг отступает И у нас преимущество в магии,' - разрабатывает стратегию Геральт." },
+        { "Simple": "Отметь ВСЕ комбинации условий, при которых будет принято решение атаковать." }
+      ],
+      "Option": [
+        "our_forces = 500, enemy_forces = 400, reinforcements = True, enemy_retreating = False, magic_advantage = False",
+        "our_forces = 450, enemy_forces = 500, reinforcements = True, enemy_retreating = True, magic_advantage = True",
+        "our_forces = 600, enemy_forces = 550, reinforcements = False, enemy_retreating = False, magic_advantage = True",
+        "our_forces = 400, enemy_forces = 450, reinforcements = False, enemy_retreating = True, magic_advantage = True",
+        "our_forces = 550, enemy_forces = 500, reinforcements = True, enemy_retreating = False, magic_advantage = False",
+        "our_forces = 300, enemy_forces = 400, reinforcements = False, enemy_retreating = True, magic_advantage = False"
+      ],
+      "CorrectAnswer": [
+        "our_forces = 500, enemy_forces = 400, reinforcements = True, enemy_retreating = False, magic_advantage = False",
+        "our_forces = 450, enemy_forces = 500, reinforcements = True, enemy_retreating = True, magic_advantage = True",
+        "our_forces = 400, enemy_forces = 450, reinforcements = False, enemy_retreating = True, magic_advantage = True",
+        "our_forces = 550, enemy_forces = 500, reinforcements = True, enemy_retreating = False, magic_advantage = False"
+      ],
+      "SupportHint": "Условие: (наши_силы > вражеских И подкрепление) ИЛИ (враг_отступает И преимущество_в_магии)",
+      "SupportAnswer": "Правильные комбинации:\n\n1. 500>400=True, reinforcements=True → condition1=True\n   True or ... → Атаковать ✓\n\n2. 450>500=False, reinforcements=True → condition1=False\n   enemy_retreating=True, magic_advantage=True → condition2=True\n   False or True → Атаковать ✓\n\n3. 400>450=False, reinforcements=False → condition1=False  \n   enemy_retreating=True, magic_advantage=True → condition2=True\n   False or True → Атаковать ✓\n\n4. 550>500=True, reinforcements=True → condition1=True\n   True or ... → Атаковать ✓\n\nНеправильные:\n- 600>550=True, reinforcements=False → condition1=False\n  enemy_retreating=False, magic_advantage=True → condition2=False\n  False or False → Не атаковать ✗\n\n- 300>400=False, reinforcements=False → condition1=False\n  enemy_retreating=True, magic_advantage=False → condition2=False\n  False or False → Не атаковать ✗",
+      "IsCode": false
+    },
+    {
+      "Name": "Эпилог: Мудрость логических решений",
+      "Description": [
+        { "Header": "Вечер после тренировки" },
+        { "Simple": "'Превосходно!' - говорит Йеннифэр. 'Ты освоил and, or, not - три кита логического программирования. Теперь ты можешь создавать сложные условия для любых ситуаций.'" },
+        { "Header": "Что ты освоил:" },
+        { "Simple": "• and - объединение условий (оба должны быть True)\n• or - альтернатива (хотя бы одно True)\n• not - инверсия (меняет True на False и наоборот)\n• Приоритет операций: not, and, or\n• Законы де Моргана для упрощения выражений" },
+        { "Header": "Путь к мастерству" },
+        { "Simple": "'Теперь,' - улыбается Геральт, 'когда ты понимаешь логику, пришло время изучить работу с числами. Без точных расчетов не победить в серьезном бою!' Лютик поднимает кружку: 'За логику!'" }
+      ],
+      "Option": [],
+      "CorrectAnswer": [],
+      "SupportHint": "",
+      "SupportAnswer": "",
+      "IsCode": false
+    }
+  ]
+}

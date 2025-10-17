@@ -1,0 +1,51 @@
+
+
+
+
+
+1)Table PythonSections
+
+id(GUID)
+name(string)
+
+
+5)Table userPythonSections
+id (GUID)
+idSections(GUID)
+idUser(GUID)
+isCompleted(bool)//выполнен ли раздел
+completionPercentage(double) //уровень прогресса
+dateStart (datetime)//дата начала прохождения
+dateCompleted (datetime)//дата завершения раздела
+
+
+2)Table Quests
+id(GUID)
+idSections(GUID)
+title(string)
+options(string(json)) если это задание с выбором, то хранить варианты ответа здесь
+correctAnswer (json) — хранить правильный ответ в формате JSON для автоматической проверки.
+points(int)
+isCompleted(bool)
+questType (enum)//это чек бокс или радиобатн или программный код
+supportHint(string)//определение или подсказка
+supportAnswer(string)//ответ
+
+
+
+4)Table Item //для магазина типа покупка подсказок и ответов
+id (GUID)
+name (string)
+title (string)
+cost (int) //это цена в points которые мы получаем от выполненых ответов
+itemType (enum)
+
+5)Table user
+id (GUID)
+name(string)
+password(string)//надо подумать над hash
+points (int)
+
+
+
+

@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="WpfAppPythone.Templates.SectionCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAppPythone.Templates"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:models="clr-namespace:WpfAppPythone.AppData.Models"
+            
+             mc:Ignorable="d" >
+    
+
+    <!--<UserControl.DataContext>
+    
+      <materialDesign:Card HorizontalAlignment="Stretch" 
+                       MouseLeftButtonDown="Card_MouseRightButtonDown" 
+                       VerticalAlignment="Center" Margin="10" >
+        
+    
+        <models:Section/>
+             d:DesignHeight="450" d:DesignWidth="800"
+    </UserControl.DataContext>-->
+    <Button Height="auto" Width="auto"
+            x:Name="SectionBTN"
+            Style="{StaticResource MaterialDesignPaperLightButton}"
+            Padding="0" 
+            IsEnabled="True"
+            HorizontalAlignment="Stretch" 
+            HorizontalContentAlignment="Stretch"
+            Click="SelectSectionCardClick" 
+            Margin="10" >
+        
+        <Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="180"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel HorizontalAlignment="Stretch" Margin="10" Grid.Column="0">
+                <TextBlock  x:Name="NamePlace" Text="{Binding Name}" TextWrapping="Wrap" FontWeight="Bold" FontSize="22"/>
+                <!--<TextBlock x:Name="TitlePlace" VerticalAlignment="Stretch" FontSize="20"
+                       
+                       TextWrapping="Wrap" />-->
+            </StackPanel>
+            <StackPanel Margin="10" Grid.Column="1"  Orientation="Vertical"        
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+                <Button Width="30"
+                    Padding="2,0,2,0"
+                    materialDesign:RippleAssist.IsCentered="True"
+                
+                    Style="{StaticResource MaterialDesignToolButton}">
+                    <materialDesign:PackIcon Kind="ShareVariant" />
+                </Button>
+                <Button Width="30"
+                    Padding="2,0,2,0"
+                    materialDesign:RippleAssist.IsCentered="True"
+                    ToolTip="Начать прохождение"
+                    Style="{StaticResource MaterialDesignToolButton}" Click="SelectSectionCardClick"><!--Click="SelectSectionCardClick"-->
+                    <materialDesign:PackIcon Kind="About"  />
+                </Button>
+            </StackPanel>
+
+        </Grid>
+    </Button>
+
+</UserControl>

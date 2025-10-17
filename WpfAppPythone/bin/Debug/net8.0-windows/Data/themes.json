@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "d541b189-784b-436f-94fb-b6d78dbe31b9",
+    "Name": "Ввод и вывод данных (input(), print())",
+    "Index": 1,
+    "Quests": null,
+    "UsersSection": null
+  },
+  {
+    "Id": "d5858598-c3f0-4dbd-930d-d4eb67f79e5d",
+    "Name": "Переменные и базовые типы данных (int, float, str, bool)",
+    "Index": 2,
+    "Quests": null,
+    "UsersSection": null
+  },
+  {
+    "Id": "07480819-38b4-4772-b983-9024e6ea82ae",
+    "Name": "Арифметические операции и операторы сравнения",
+    "Index": 3,
+    "Quests": null,
+    "UsersSection": null
+  },
+  {
+    "Id": "8c265e80-ab20-4f52-a628-6e08349dcab8",
+    "Name": "Логические операторы (and, or, not)",
+    "Index": 4,
+    "Quests": null,
+    "UsersSection": null
+  },
+  {
+    "Id": "f8f848a2-5bf6-4a37-b8f9-a768df64e62f",
+    "Name": "Работа с числами (целые, вещественные, округление и т.д.)",
+    "Index": 5,
+    "Quests": null,
+    "UsersSection": null
+  },
+  {
+    "Id": "0df25efd-d7c6-4140-bde4-210c680585b9",
+    "Name": "Работа со строками (конкатенация, индексация, базовые методы)",
+    "Index": 6,
+    "Quests": null,
+    "UsersSection": null
+  },
+  {
+    "Id": "c7a0c039-cc07-43ed-8b75-1dd71221208a",
+    "Name": "Условия (if, elif, else)",
+    "Index": 7,
+    "Quests": null,
+    "UsersSection": null
+  },
+  {
+    "Id": "3aa2c477-63ee-43ed-9952-1d9f6deea83c",
+    "Name": "Циклы (for, while)",
+    "Index": 8,
+    "Quests": null,
+    "UsersSection": null
+  }
+]

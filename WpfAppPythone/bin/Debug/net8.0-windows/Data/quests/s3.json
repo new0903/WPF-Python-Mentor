@@ -1,0 +1,173 @@
+{
+  "SectionId": "07480819-38b4-4772-b983-9024e6ea82ae",
+  "Quests": [
+    {
+      "Name": "Пролог: Магия вычислений в мире Python",
+      "Description": [
+        { "Header": "Магический круг в Каэр Морхене" },
+        { "Simple": "Йеннифэр рисует в воздухе светящиеся символы: 'В Python, как и в магии, есть свои заклинания-операции. Они позволяют творить вычисления и сравнения - основу любой боевой тактики.'" },
+        { "Header": "Заклинания арифметики" },
+        { "Simple": "a + b  # Сложение - объединение сил\nа - b  # Вычитание - потеря здоровья\nа * b  # Умножение - усиление атаки\nа / b  # Деление - распределение добычи\nа // b # Целое деление - монеты без сдачи\nа % b  # Остаток - лишние зелья\nа ** b # Степень - комбо-удар" },
+        { "Header": "Рунные знаки сравнения" },
+        { "Simple": "a == b  # Равны ли силы?\na != b  # Разные ли типы оружия?\na > b   # Наша атака сильнее?\na < b   # Защита слабее?\na >= b  # Уровень достаточен?\na <= b  # Вес в пределах нормы?" },
+        { "Simple": "'Сегодня,' - говорит Йеннифэр, 'ты научишься читать и создавать магические формулы Python. Это ключ к победе над Вильгефорцем!'" }
+      ],
+      "Option": [],
+      "CorrectAnswer": [],
+      "SupportHint": "",
+      "SupportAnswer": "",
+      "IsCode": false
+    },
+    {
+      "Name": "Задание 1: Расчет награды за контракт",
+      "Description": [
+        { "Header": "Таверна 'Три ворона'" },
+        { "Simple": "Староста предлагает контракт: 'За гуля - 200 крон, за каждого дополнительного - плюс 50 крон. Всего гулей: 4.'" },
+        { "Simple": "Какой код правильно рассчитает награду? Выбери ОДИН вариант." }
+      ],
+      "Option": [
+        "base = 200\nbonus = 50\ntotal = 4\nreward = base + bonus * (total - 1)\nprint(reward)",
+        "reward = 200 + 50 * 4\nprint(reward)",
+        "monsters = 4\nreward = 200 + 50 * (monsters - 1)\nprint(reward)",
+        "reward = (200 + 50) * 4 - 50\nprint(reward)",
+        "first = 200\nothers = 50 * 3\nprint(first + others)",
+        "reward = 200\nfor i in range(3):\n    reward += 50\nprint(reward)"
+      ],
+      "CorrectAnswer": [
+        "monsters = 4\nreward = 200 + 50 * (monsters - 1)\nprint(reward)"
+      ],
+      "SupportHint": "Первый гуль - 200 крон, остальные 3 - по 50 крон каждый.",
+      "SupportAnswer": "Правильный ответ: monsters = 4\nreward = 200 + 50 * (monsters - 1)\nprint(reward)\n\nВыведет: 350\n\nОбъяснение:\n- Первый гуль: 200 крон\n- Остальные 3 гуля: 3 * 50 = 150 крон\n- Итого: 200 + 150 = 350 крон\n\nДругие варианты:\n- 200 + 50 * (4-1) = 350 ✓ (но переменные другие)\n- 200 + 50 * 4 = 400 ✗ (переплата)\n- (200+50)*4-50 = 950 ✗ (неправильная логика)\n- 200 + 50*3 = 350 ✓ (но нет переменной total)\n- Цикл тоже даст 350, но код сложнее",
+      "IsCode": false
+    },
+    {
+      "Name": "Задание 2: Анализ зелья силы",
+      "Description": [
+        { "Header": "Алхимическая лаборатория" },
+        { "Simple": "Трисс тестирует зелье: 'Базовая сила: 60. При добавлении эссенции дракона сила умножается на 1.5. Критическое срабатывание добавляет +20.'" },
+        { "Simple": "Что выведет этот код?\nbase = 60\nessence = True\ncritical = True\nif essence:\n    base = base * 1.5\nif critical:\n    base = base + 20\nprint(int(base))" }
+      ],
+      "Option": [
+        "60",
+        "90",
+        "110",
+        "80",
+        "120",
+        "130",
+        "140"
+      ],
+      "CorrectAnswer": [
+        "110"
+      ],
+      "SupportHint": "Сначала применяется множитель эссенции, потом добавляется бонус критического срабатывания.",
+      "SupportAnswer": "Правильный ответ: 110\n\nПошаговое выполнение кода:\n1. base = 60\n2. essence = True → условие выполняется\n   base = 60 * 1.5 = 90.0\n3. critical = True → условие выполняется  \n   base = 90.0 + 20 = 110.0\n4. int(110.0) = 110\n\nКод выведет: 110",
+      "IsCode": false
+    },
+    {
+      "Name": "Задание 3: Распределение зелий в отряде",
+      "Description": [
+        { "Header": "Подготовка к штурму" },
+        { "Simple": "'Всего 17 зелий лечения на 5 бойцов,' - говорит Геральт. 'Каждый должен получить поровну, остаток пойдет в общий запас.'" },
+        { "Simple": "Отметь ВСЕ верные варианты кода для расчета распределения." }
+      ],
+      "Option": [
+        "total = 17\nfighters = 5\nper_fighter = total // fighters\nreserve = total % fighters\nprint(per_fighter, reserve)",
+        "potions = 17\nprint(f'Каждому: {potions//5}, в запас: {potions%5}')",
+        "print(f'Зелья: {17//5}, остаток: {17-15}')",
+        "a = 17\nb = 5\nprint(a/b, a//b, a%b)",
+        "result = divmod(17, 5)\nprint(f'Каждому: {result[0]}, остаток: {result[1]}')",
+        "potions = 17\nfor i in range(5):\n    print(3)\nprint(2)"
+      ],
+      "CorrectAnswer": [
+        "total = 17\nfighters = 5\nper_fighter = total // fighters\nreserve = total % fighters\nprint(per_fighter, reserve)",
+        "potions = 17\nprint(f'Каждому: {potions//5}, в запас: {potions%5}')",
+        "result = divmod(17, 5)\nprint(f'Каждому: {result[0]}, остаток: {result[1]}')"
+      ],
+      "SupportHint": "17 // 5 = 3, 17 % 5 = 2. Каждому по 3 зелья, 2 в запас.",
+      "SupportAnswer": "Правильные варианты:\n\n1. total = 17\n   fighters = 5\n   per_fighter = total // fighters  # 3\n   reserve = total % fighters       # 2\n   print(per_fighter, reserve)      # Выведет: 3 2 ✓\n\n2. potions = 17\n   print(f'Каждому: {potions//5}, в запас: {potions%5}')\n   # Выведет: Каждому: 3, в запас: 2 ✓\n\n3. result = divmod(17, 5)  # (3, 2)\n   print(f'Каждому: {result[0]}, остаток: {result[1]}')\n   # Выведет: Каждому: 3, остаток: 2 ✓\n\nНеправильные:\n- print(f'Зелья: {17//5}, остаток: {17-15}')  # Остаток вычислен неправильно\n- print(a/b, a//b, a%b)  # Выведет 3.4 3 2 - лишнее значение\n- Цикл выведет пять раз 3 и потом 2 - неформатированный вывод",
+      "IsCode": false
+    },
+    {
+      "Name": "Задание 4: Проверка боеготовности",
+      "Description": [
+        { "Header": "Инспекция отряда" },
+        { "Simple": "'Минимальные требования: атака >= 70, защита >= 50, уровень >= 5,' - зачитывает сержант. 'Боец: атака=75, защита=55, уровень=6.'" },
+        { "Simple": "Что выведет этот код?\nattack = 75\ndefense = 55\nlevel = 6\nready = (attack >= 70) and (defense >= 50) and (level >= 5)\nprint(ready)\nprint(attack >= 70)\nprint(defense >= 50) \nprint(level >= 5)" }
+      ],
+      "Option": [
+        "True\nTrue\nTrue\nTrue",
+        "False\nTrue\nTrue\nTrue",
+        "True\n75\n55\n6",
+        "True\n70\n50\n5",
+        "False\nFalse\nFalse\nFalse",
+        "True\nTrue\nTrue\nFalse"
+      ],
+      "CorrectAnswer": [
+        "True\nTrue\nTrue\nTrue"
+      ],
+      "SupportHint": "Все условия выполняются: 75>=70, 55>=50, 6>=5",
+      "SupportAnswer": "Правильный ответ: True\nTrue\nTrue\nTrue\n\nПошаговое выполнение:\n1. attack >= 70 → 75 >= 70 → True\n2. defense >= 50 → 55 >= 50 → True  \n3. level >= 5 → 6 >= 5 → True\n4. ready = True and True and True → True\n5. print(ready) → True\n6. print(attack >= 70) → True\n7. print(defense >= 50) → True\n8. print(level >= 5) → True\n\nВсе условия выполнены, боец готов к сражению!",
+      "IsCode": false
+    },
+    {
+      "Name": "Задание 5: Расчет урона комбо-атаки",
+      "Description": [
+        { "Header": "Тренировка с Геральтом" },
+        { "Simple": "'Базовая атака: 40 урона. Каждый следующий удар в комбо умножает силу на 1.2. Максимум 3 удара в комбо.'" },
+        { "Simple": "Какой код правильно рассчитает урон для 3-ударного комбо? Выбери ОДИН вариант." }
+      ],
+      "Option": [
+        "base = 40\ncombo = 3\ndamage = base * 1.2 ** combo\nprint(damage)",
+        "damage = 40\nfor i in range(3):\n    damage = damage * 1.2\nprint(damage)",
+        "damage = 40 * 1.2 * 1.2 * 1.2\nprint(damage)",
+        "print(40 * (1 + 0.2) ** 3)",
+        "Все варианты верны",
+        "Первый и второй варианты верны"
+      ],
+      "CorrectAnswer": [
+        "Все варианты верны"
+      ],
+      "SupportHint": "Все варианты вычисляют 40 * 1.2 * 1.2 * 1.2 = 69.12",
+      "SupportAnswer": "Правильный ответ: Все варианты верны\n\nВсе варианты вычисляют одинаковый урон:\n\n1. base = 40\n   combo = 3\n   damage = base * 1.2 ** combo  # 40 * 1.2³ = 40 * 1.728 = 69.12 ✓\n\n2. damage = 40\n   for i in range(3):\n       damage = damage * 1.2     # 40→48→57.6→69.12 ✓\n\n3. damage = 40 * 1.2 * 1.2 * 1.2  # Прямое вычисление = 69.12 ✓\n\n4. print(40 * (1 + 0.2) ** 3)     # 40 * 1.2³ = 69.12 ✓\n\nВсе варианты выводят: 69.12 (или 69.11999999999999 из-за точности float)",
+      "IsCode": false
+    },
+    {
+      "Name": "Задание 6: Сравнение магических потенциалов",
+      "Description": [
+        { "Header": "Тестирование у Йеннифэр" },
+        { "Simple": "'Сравни магические потенциалы: наш - 185, вражеский - 192. Разница менее 10 считается незначительной.'" },
+        { "Simple": "Что выведет этот код?\nour_power = 185\nenemy_power = 192\ndiff = abs(our_power - enemy_power)\nprint(f'Разница: {diff}')\nprint(diff < 10)\nprint(our_power == enemy_power)\nprint(our_power > enemy_power)\nprint(our_power != enemy_power)" }
+      ],
+      "Option": [
+        "Разница: 7\nTrue\nFalse\nFalse\nTrue",
+        "Разница: 7\nFalse\nFalse\nTrue\nTrue",
+        "Разница: -7\nTrue\nFalse\nFalse\nTrue",
+        "Разница: 7\nTrue\nTrue\nFalse\nFalse",
+        "Разница: 185\nFalse\nFalse\nTrue\nTrue",
+        "Разница: 192\nTrue\nFalse\nFalse\nTrue"
+      ],
+      "CorrectAnswer": [
+        "Разница: 7\nTrue\nFalse\nFalse\nTrue"
+      ],
+      "SupportHint": "abs(185-192) = 7, 7 < 10 = True, 185 != 192 = True",
+      "SupportAnswer": "Правильный ответ: Разница: 7\nTrue\nFalse\nFalse\nTrue\n\nПошаговое выполнение:\n1. our_power = 185, enemy_power = 192\n2. diff = abs(185 - 192) = abs(-7) = 7\n3. print(f'Разница: {diff}') → Разница: 7\n4. print(diff < 10) → 7 < 10 → True\n5. print(our_power == enemy_power) → 185 == 192 → False\n6. print(our_power > enemy_power) → 185 > 192 → False  \n7. print(our_power != enemy_power) → 185 != 192 → True\n\nВывод: разница незначительная (7 < 10), но потенциалы разные.",
+      "IsCode": false
+    },
+    {
+      "Name": "Эпилог: Искусство Python-заклинаний",
+      "Description": [
+        { "Header": "Вечер у костра" },
+        { "Simple": "'Отлично!' - хвалит Йеннифэр. 'Ты научился читать и понимать код Python. Теперь ты видишь, как арифметика и сравнения работают в программах.'" },
+        { "Header": "Что ты освоил:" },
+        { "Simple": "• Чтение и анализ готового кода\n• Понимание приоритета операций\n• Работу с переменными и вычислениями\n• Логику операторов сравнения\n• Предсказание вывода программы" },
+        { "Header": "Следующий уровень" },
+        { "Simple": "'Теперь,' - говорит Геральт, поправляя меч, 'когда ты умеешь читать код, пришло время изучить логические операторы. Они объединяют условия в сложные стратегии!' Лютик подливает эля в кружки." }
+      ],
+      "Option": [],
+      "CorrectAnswer": [],
+      "SupportHint": "",
+      "SupportAnswer": "",
+      "IsCode": false
+    }
+  ]
+}
