@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WpfAppPythone")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2216767ff2af889cf07a7265eefbbc40c3120a42")]
 [assembly: System.Reflection.AssemblyProductAttribute("WpfAppPythone")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WpfAppPythone")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

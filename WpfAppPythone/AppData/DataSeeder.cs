@@ -152,6 +152,11 @@ namespace WpfAppPythone.AppData
         public static async Task GenerateQuests(this AppDBContext context)
         {
             if (await context.Quests.AnyAsync()) return;
+            var questsPath = Path.Combine(Directory.GetCurrentDirectory(), "data", "quests");
+            if (!Directory.Exists(questsPath))
+            {
+                return;
+            }
 
             var files = Directory.GetFiles(Path.Combine(Directory.GetCurrentDirectory(), "data","quests"), "*.json");
 

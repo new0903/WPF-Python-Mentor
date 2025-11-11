@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,9 @@ namespace WpfAppPythone.AppData
         public DbSet<UserItems> UserItems { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+            if (!Path.Exists(path)) Directory.CreateDirectory(path);
             optionsBuilder.UseSqlite("Data Source=Data\\learning.db");
         }
 
